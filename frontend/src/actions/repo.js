@@ -33,7 +33,7 @@ export const getRepositories = () => async dispatch => {
           query,
           {headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer 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`,
+            'Authorization': `Bearer ${process.env.REACT_APP_GH_TOKEN}`,
           }}
         )
         dispatch( {

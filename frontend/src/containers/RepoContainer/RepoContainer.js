@@ -2,8 +2,6 @@ import React, { Component }  from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Repo from '../../components/Repo/Repo';
-import enableHooks from 'jest-react-hooks-shallow';
-
 
 import './RepoContainer.css';
 import {

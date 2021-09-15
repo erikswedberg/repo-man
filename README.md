@@ -4,10 +4,11 @@
 this is a demo using Github's GraphQL API
 
 ### To Run
-cd frontend
-yarn start
+`source env.sh && cd frontend && yarn start`
 
 This project was bootstrapped with create-react-app
+
+You should have an .envrc.example file in /config that contains your personal github token
 
 ### To Test
 cd frontend
