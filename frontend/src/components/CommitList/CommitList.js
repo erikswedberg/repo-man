@@ -15,16 +15,18 @@ class CommitList extends React.Component {
         {commits.map((commit) => (
           <li key={commit.id}>
             <div className="commitInfoCont">
-              <div className="commitInfo">
-                <span className="commitOid">
-                  {commit.abbreviatedOid}
-                </span>
-                <span className="commitDate">
-                  {moment(commit.committedDate).format('M/D/YYYY h:mm a')}
-                </span>
-                <span className="commitMessage">
-                  {commit.messageBody}
-                </span>
+              <div className="commitInfoContCont">
+                <div className="commitInfo">
+                  <span className="commitOid">
+                    {commit.abbreviatedOid}
+                  </span>
+                  <span className="commitDate">
+                    {moment(commit.committedDate).format('M/D/YYYY h:mm a')}
+                  </span>
+                  <span className="commitMessage">
+                    {commit.message}
+                  </span>
+                </div>
               </div>
               <div className="commitLinkContCont">
                 <div className="commitLinkCont">

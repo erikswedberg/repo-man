@@ -78,7 +78,7 @@ export const getCommits = (owner = 'netflix', repo = 'Hyrix') => async (dispatch
                               committedDate,
                               commitUrl,
                               abbreviatedOid,
-                              messageBody
+                              message
                             }
                           }
                         }

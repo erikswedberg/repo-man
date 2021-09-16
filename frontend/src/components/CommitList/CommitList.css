@@ -28,7 +28,6 @@
   display: block;
 }
 .commitInfo span {
-  display: inline-block;
 }
 .commitOid {
   width: 75px;
@@ -40,7 +39,6 @@
   display: block;
 }
 .commitLink {
-  padding-left: 20px;
   font-size: 13px;
   color: deepskyblue;
   overflow: hidden;
@@ -54,12 +52,22 @@
   display: inline-block;
 }
 .commitLinkCont {
-  width: 375px;
+  width: 400px;
   float: right;
 }
 .commitLinkCont:after {
   clear: both;
 }
 .commitInfoCont {
-  display: block;  
+  display: table;
+  width: 100%;
+}
+.commitInfoContCont {
+  display: table-row;
+}
+.commitInfoContCont span {
+  display: table-cell;
+}
+.commitMessage {
+  max-width: 400px;
 }
