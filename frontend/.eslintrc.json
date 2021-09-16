@@ -23,6 +23,10 @@
       "react/jsx-filename-extension": "off",
       "react/prefer-stateless-function": "off",
       "react/destructuring-assignment": "off",
-      "import/prefer-default-export": "off"
+      "import/prefer-default-export": "off",
+      "react/forbid-prop-types": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "jsx-a11y/no-noninteractive-element-interactions": "off",
+      "react/no-unused-state": "off"
     }
 }

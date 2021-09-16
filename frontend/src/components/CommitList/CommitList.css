@@ -1,0 +1,65 @@
+.CommitList {
+  padding: 0 10px 20px 35px;
+  margin: 10px 0 0 20px;
+  border: 1px solid #ccc;
+}
+.CommitList li {
+  list-style-type: decimal;
+  text-align: left;
+  padding: 6px 6px;
+  border-radius: 3px;
+}
+.CommitList li:hover {
+  background: rgba(135, 206, 250, 0.3);
+}
+.commitDate {
+  font-size: 12px;
+  color: #999;
+}
+.commitOid {
+  font-size: 13px;
+  color: #333;
+}
+.commitMessage {
+  font-size: 13px;
+  color: #333;
+}
+.commitInfo {
+  display: block;
+}
+.commitInfo span {
+  display: inline-block;
+}
+.commitOid {
+  width: 75px;
+}
+.commitDate {
+  width: 150px;
+}
+.commitInfo a {
+  display: block;
+}
+.commitLink {
+  padding-left: 20px;
+  font-size: 13px;
+  color: deepskyblue;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  text-align: right;
+
+}
+.commitLinkContCont {
+  width: 100%;
+  display: inline-block;
+}
+.commitLinkCont {
+  width: 375px;
+  float: right;
+}
+.commitLinkCont:after {
+  clear: both;
+}
+.commitInfoCont {
+  display: block;  
+}

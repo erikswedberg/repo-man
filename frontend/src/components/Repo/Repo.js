@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import car from './RepoMan.jpg'; // Tell webpack this JS file uses this image
+import RepoList from '../RepoList/RepoList';
+import CommitList from '../CommitList/CommitList';
 
 import './Repo.css';
 
@@ -23,7 +26,6 @@ class Repo extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log('A name was submitted: ', this.state.owner);
     event.preventDefault();
     const { lastOwner, owner } = this.state;
     if (lastOwner !== owner) {
@@ -38,6 +40,9 @@ class Repo extends React.Component {
   }
 
   render() {
+    const repositories = _.get(this.props.owner, 'repositories', []);
+    const repository = _.find(repositories, { id: this.props.currentRepositoryId });
+    const repositoryName = _.get(repository, 'name');
     return (
       <div className="Repo">
         <img src={car} alt="Repo Man Car" width="275" />
@@ -50,13 +55,43 @@ class Repo extends React.Component {
           </label>
           <input className="formSubmit" type="submit" value="Submit" />
         </form>
+        <div className="cont">
+          <div>
+            <h5>Repositories</h5>
+            <RepoList owner={this.props.owner} getCommits={this.props.getCommits} />
+          </div>
+          <div>
+            { this.props.currentRepositoryId
+              ? (
+                <>
+                  <h5 className="commitHeader">
+                    { `${repositoryName} ` }
+                    Commits
+                  </h5>
+                  <CommitList
+                    owner={this.props.owner}
+                    currentRepositoryId={this.props.currentRepositoryId}
+                  />
+                </>
+              )
+              : null }
+          </div>
+        </div>
       </div>
     );
   }
 }
 
 Repo.propTypes = {
+  owner: PropTypes.object,
   getRepositories: PropTypes.func.isRequired,
+  getCommits: PropTypes.func.isRequired,
+  currentRepositoryId: PropTypes.string,
+};
+
+Repo.defaultProps = {
+  owner: {},
+  currentRepositoryId: null,
 };
 
 export default Repo;

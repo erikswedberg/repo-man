@@ -1,0 +1,34 @@
+.RepoList {
+  padding: 0 10px 20px 35px;
+  margin: 10px 0 0 0;
+  border: 1px solid #ccc;
+}
+.RepoList li {
+  list-style-type: decimal;
+  margin: 6px;
+  padding: 3px;
+  border-radius: 3px;
+}
+.RepoList li:hover {
+  background: rgba(135, 206, 250, 0.3);
+}
+.RepoList li .name {
+  display: block;
+
+}
+.counts {
+  text-align: right;
+}
+.RepoList li .forks, .RepoList li .watchers, .RepoList li .stars  {
+  font-size: 12px;
+  color: #999;
+  width: 90px;
+  display: inline-block;
+  text-align: right;
+}
+.link {
+  padding-left: 20px;
+  font-size: 13px;
+  color: deepskyblue;
+  float: right;
+}
