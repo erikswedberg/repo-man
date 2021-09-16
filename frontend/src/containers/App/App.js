@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import RepoContainer from '../RepoContainer/RepoContainer'
+import RepoContainer from '../RepoContainer/RepoContainer';
 
 function App() {
   return (

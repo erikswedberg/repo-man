@@ -1,29 +1,27 @@
-//import _ from 'lodash';
-//import { districtsIdsArrayToMap, districtIdsArrayToMap } from '../helper/district';
-import {GET_REPOS} from '../types'
+// import _ from 'lodash';
+// import { districtsIdsArrayToMap, districtIdsArrayToMap } from '../helper/district';
+import { GET_REPOS } from '../types';
 
 const defaultState = {
-  //plans: [],
+  // plans: [],
   allIds: [],
   byId: {},
-  //chosenPlan: null,
-  //chosenDistrict: null,
-  //loadingPlan: false,
-  //accessGeography: null,
+  // chosenPlan: null,
+  // chosenDistrict: null,
+  // loadingPlan: false,
+  // accessGeography: null,
 };
 
 const RepoReducer = (state = defaultState, action) => {
-  console.log('*** REDUCER', action)
+  console.log('*** REDUCER', action); // eslint-disable-line
   switch (action.type) {
-    
     case GET_REPOS:
-    return {
+      return {
         ...state,
-        repos:action.payload.data,
-        loading:false
+        repos: action.payload.data,
+        loading: false,
+      };
 
-    }
-    
     // case 'BALLISTA_LOGOUT': {
     //   return defaultState;
     // }
@@ -145,7 +143,8 @@ const RepoReducer = (state = defaultState, action) => {
     //   const chosenPlan = { ...state.chosenPlan };
     //   const chosenDistrict = { ...state.chosenDistrict };
     //   const newDistricts = districtsIdsArrayToMap(_.get(action, 'payload.data.districts', []));
-    //   const newChosenDistrictIndex = _.findIndex(newDistricts, { id: _.get(chosenDistrict, 'id') });
+    //   const newChosenDistrictIndex = _.findIndex(
+    //        newDistricts, { id: _.get(chosenDistrict, 'id') });
     //   let newChosenDistrict = {};
     //   if (newChosenDistrictIndex !== -1) {
     //     newChosenDistrict = newDistricts[newChosenDistrictIndex];

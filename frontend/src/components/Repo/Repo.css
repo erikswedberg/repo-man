@@ -1,0 +1,19 @@
+.formLabel {
+  font-size: 13px;
+  color: #666;
+}
+.ownerInput {
+  width: 300px;
+  font-size: 20px;
+  margin-top: 3px;
+}
+.formSubmit {
+  margin-left: 10px;
+  height: 30px;
+  vertical-align: middle;
+  margin-top: -4px;
+  background: lightskyblue;
+  border: white;
+  color: white;
+  border-radius: 3px;
+}
