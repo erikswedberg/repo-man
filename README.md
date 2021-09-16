@@ -9,6 +9,8 @@ clicking on a repo's list item will make a subsequent call to get that repo's la
 
 This uses normalizr and a `byId: {}, allIds: []` scheme to flatten the Redux store, but pass nested objects to the React components for rendering
 
+It makes the GraphQL calls without any other libraries or helpers than `axios` / `fetch()` (i.e. no Apollo) and parses them into the redux state in reducers
+
 ### To Run
 `source env.sh && cd frontend && yarn start`
 
@@ -30,3 +32,4 @@ This will run eslint / airbnb on the JavaScript
 ### To Do
 * Pagination of Results
 * Better Testing
+* Add a proper github API token and a backend to proxy the API calls
